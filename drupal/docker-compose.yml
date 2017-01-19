@@ -7,7 +7,7 @@ volumes:
 
 services:
   nginx:
-    image: nginx:latest
+    build: ./docker/nginx/
     ports:
       - 8080:80
     volumes:
