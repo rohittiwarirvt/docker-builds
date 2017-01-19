@@ -1,3 +1,7 @@
-FROM php:7.0-fpm
+FROM ubuntu:14.04
 
-RUN docker-php-ext-install pdo_mysql && docker-php-ext-install json
+RUN apt-get update
+RUN apt-get install software-properties-common -y
+RUN apt-add-repository ppa:ondrej/php
+RUN apt-get update
+RUN apt-get install  php7.0-fpm php7.0-mysql php7.0 php7.0-gd -y
